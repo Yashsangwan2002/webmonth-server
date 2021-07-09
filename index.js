@@ -10,6 +10,8 @@ const booknowRoutes = require("./routes/booknow");
 const app = express();
 
 app.use("/public", express.static("public"));
+
+app.use(express.urlencoded({ extended: false }));
 const port = process.env.PORT;
 
 app.use(function (req, res, next) {
