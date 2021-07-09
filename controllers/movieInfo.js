@@ -6,10 +6,8 @@ exports.movieInfo = (req, res) => {
   client
     .query(`select * from book where email = '${email}'`)
     .then((data) => {
-      // console.log(data);
       const noteData = data.rows;
 
-      // console.log(filteredData);
       res.status(200).json(noteData);
     })
 

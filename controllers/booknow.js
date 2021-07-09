@@ -1,11 +1,7 @@
 const client = require("../configs/db");
-//email from token
 
 exports.bookNow = (req, res) => {
   const { movieName, date, email } = req.body;
-
-  // const seatobj = JSON.stringify(seats);
-  // const seatobj  =JSON.stringify(Object.assign({}, seats))
 
   console.log(movieName, " ", date);
 

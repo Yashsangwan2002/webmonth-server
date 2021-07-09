@@ -74,11 +74,8 @@ exports.signIn = (req, res) => {
     .query(`SELECT * FROM users WHERE email = '${email}';`)
     .then((data) => {
       userData = data.rows;
-      // []
 
-      //IF IN RESPONSE DATA FROM DB WE GET BACK AN EMPTY ARRAY THIS MEANS NO USER EXISTS WITH THE EMAIL GIVEN BY USER, THAT IS THE USER IS NOT SIGNED UP
       if (userData.length === 0) {
-        //SO WE CHECK FOR EMPTY ARRAY AND IF THE CONDITION IS TRUE WE SEND BACK RESPONSE TO SIGNUP FIRST
         res.status(400).json({
           error: "User does not exist, signup instead!",
         });
