@@ -8,7 +8,7 @@ const infoRoutes = require("./routes/info");
 const booknowRoutes = require("./routes/booknow");
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8100;
 
 app.use(cors());
 
