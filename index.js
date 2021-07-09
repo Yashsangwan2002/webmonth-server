@@ -28,9 +28,8 @@ app.use(function (req, res, next) {
 app.use(cors());
 
 app.use(express.json());
-
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./frontend-Copy/index.html"));
+  res.status(200).send("Server is up and running!!");
 });
 
 app.use("/auth", authRoutes);
