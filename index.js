@@ -8,14 +8,25 @@ const infoRoutes = require("./routes/info");
 const booknowRoutes = require("./routes/booknow");
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json"
+  );
+  next();
+});
 
 app.use(cors());
 
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/dasheee/index.html");
+  res.send("server is running");
 });
 
 app.use("/auth", authRoutes);
