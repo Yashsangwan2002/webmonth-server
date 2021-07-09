@@ -11,10 +11,10 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
-  res.header(
+  req.header("Access-Control-Allow-Origin", "*");
+  req.header("Access-Control-Allow-Credentials", true);
+  req.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+  req.header(
     "Access-Control-Allow-Headers",
     "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json"
   );
