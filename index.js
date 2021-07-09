@@ -8,7 +8,9 @@ const infoRoutes = require("./routes/info");
 const booknowRoutes = require("./routes/booknow");
 
 const app = express();
-const port = process.env.PORT || 8000;
+
+app.use("/public", express.static("public"));
+const port = process.env.PORT;
 
 app.use(function (req, res, next) {
   req.header("Access-Control-Allow-Origin", "*");
@@ -26,7 +28,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("server is running");
+  res.sendFile(path.join(__dirname, "./frontend-Copy/index.html"));
 });
 
 app.use("/auth", authRoutes);
