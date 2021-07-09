@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.status(200).sendFile("./dasheee/hindex.html");
+  res.sendFile("./dasheee/index.html").status(200);
 });
 
 app.use("/auth", authRoutes);
