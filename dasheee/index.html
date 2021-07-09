@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="logo">
+      <h1 class="title">Theatre</h1>
+    </div>
+
+    <div class="container" id="container">
+      <div class="form">
+        <div class="form-container sign-up-container">
+          <form class="signup-form" action="">
+            <h1>Create Account</h1>
+
+            <div>
+              <input
+                class="signup-name"
+                type="text"
+                name="name"
+                placeholder=" &#xf007;  Name"
+              />
+            </div>
+            <div>
+              <input
+                class="signup-email"
+                type="email"
+                name="email"
+                placeholder=" &#xf0e0;  Email"
+              />
+            </div>
+            <div>
+              <input
+                class="signup-password"
+                type="password"
+                name="password"
+                placeholder="&#xf023;  Password"
+              />
+            </div>
+            <button class="submit">SignUp</button>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form class="signin-form" action="#">
+            <h1>Sign In</h1>
+            <div>
+              <input
+                class="signin-email"
+                type="email"
+                name="email"
+                placeholder=" &#xf0e0;  Email"
+              />
+            </div>
+            <div>
+              <input
+                class="signin-password"
+                type="password"
+                name="password"
+                placeholder=" &#xf023;  Password"
+              />
+            </div>
+
+            <button class="submit">Sign In</button>
+          </form>
+        </div>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>You're Welcome</h1>
+            <p>Login to Enter the Theatre</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hey, Buddy!</h1>
+
+            <p>Oops! don't have an account? Signup</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
